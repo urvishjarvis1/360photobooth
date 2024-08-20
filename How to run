@@ -1,0 +1,5 @@
+To start the server:
+npm install
+npm start
+> npm install --global serve
+serve -s build -p 80

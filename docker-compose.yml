@@ -1,0 +1,7 @@
+services:
+  priya-shop:
+    build: .
+    ports:
+      - "7800:3000"
+    volumes:
+      - ./src:/portfoilio/priya/
