@@ -3,6 +3,7 @@ import Preloader from "../src/components/Pre";
 import Navbar from "./components/Navbar";
 import Home from "./components/Home/Home";
 import Footer from "./components/Footer";
+import Contact from "./components/Contact/Contact"
 
 import {
   BrowserRouter as Router,
@@ -34,6 +35,7 @@ function App() {
         <ScrollToTop />
         <Routes>
           <Route path="/" element={<Home />} />
+          <Route path="/Contact" element={<Contact />} />
           <Route path="*" element={<Navigate to="/"/>} />
           
         </Routes>

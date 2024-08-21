@@ -5,6 +5,7 @@ import homeLogo from "../../Assets/avatar/Little_Things_logo.gif";
 import Particle from "../Particle";
 import Home2 from "./Home2";
 import Type from "./Type";
+import Tilt from "react-parallax-tilt";
 
 function Home() {
   return (
@@ -14,7 +15,7 @@ function Home() {
         <Container className="home-content">
           <Row>
             <Col md={7} className="home-header">
-              <h1 style={{ paddingBottom: 15 }} className="heading">
+              <h1 style={{ paddingBottom: 15, paddingTop: 15 }} className="heading">
                 Hi There!{" "}
                 <span className="wave" role="img" aria-labelledby="wave">
                   👋🏻
@@ -31,13 +32,15 @@ function Home() {
               </div>
             </Col>
 
-            <Col md={4} >
-              <img
-                src={homeLogo}
-                alt="home pic"
-                className="img-fluid"
-                style={{width:400, height:400, paddingTop:40, opacity:0.8, borderRadius: 400}}
-              />
+            <Col md={5} >
+              <Tilt>
+                <img
+                  src={homeLogo}
+                  alt="home pic"
+                  className="img-fluid"
+                  style={{ paddingTop:-20}}
+                />
+              </Tilt>
             </Col>
           </Row>
         </Container>

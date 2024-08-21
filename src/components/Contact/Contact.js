@@ -1,70 +1,37 @@
 import React from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import Particle from "../Particle";
-
-function About() {
+import Type from "../Home/Type";
+function Contact() {
   return (
-    <Container fluid className="contact-section">
-      <Particle />
-      <Container>
+    <section>
+      <Container fluid className="home-section" id="home">
+        <Particle />
+        <Container className="home-content">
+          <Row>
+            <Col md={7} className="home-header">
+              <h1 style={{ paddingBottom: 15, paddingTop: 15 }} className="heading">
+                Hi There!{" "}
+                <span className="wave" role="img" aria-labelledby="wave">
+                  👋🏻
+                </span>
+              </h1>
 
-      <form id="myForm">
-     <div className="form-group">
-     <label for="name">Name</label>
-              <input
-                type="name"
-                name="name"
-                class="form-control"
-                id="name"
-                placeholder="enter your name"
-              />
+              <h1 className="heading-name">
+                Welcome to
+                <strong className="main-name"> Little Things by Priya Shah</strong>
+              </h1>
 
-        {/* email*/}
-            <div class="form-group">
-              <label for="email">Email address</label>
-              <input
-                type="email"
-                name="email"
-                class="form-control"
-                id="email"
-                placeholder="enter your email"
-              />
-            </div>
+              <div style={{ padding: 50, textAlign: "left" }}>
+                <Type />
+              </div>
+            </Col>
 
-            <div class="form-group">
-              <label for="subject">Subject</label>
-              <input
-                type="text"
-                name="subject"
-                class="form-control"
-                id="subject"
-                placeholder="enter email subject"
-              />
-            </div>
-            <div class="form-group">
-              <label for="message">Message</label>
-              <textarea class="form-control" id="message" name="message" rows="5"></textarea>
-            </div>
-
-            <button type="submit" class="btn btn-primary">Submit</button>
-
-     </div>
-     </form>
-     <script
-      src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
-      integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
-      crossorigin="anonymous"
-    ></script>
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx"
-      crossorigin="anonymous"
-    ></script>
-    
-
+          </Row>
+        </Container>
       </Container>
-    </Container>
+    </section>
   );
 }
 
-export default About;
+export default Contact;

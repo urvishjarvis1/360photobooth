@@ -7,8 +7,8 @@ html {
 
   --image-gradient: linear-gradient(
     to bottom left,
-    rgba(17, 16, 16, 0.678),
-    rgba(12, 10, 22, 0.863)
+    rgba(137, 128, 189, 0.785),
+    rgba(15, 4, 71, 0.823)
   );
 
   --imp-text-color: #c770f0;
@@ -258,10 +258,11 @@ button:focus {
   position: relative;
   z-index: -1;
   background-image: var(--image-gradient), url(./Assets/home-bg.jpg);
-  background-position: center bottom;
+  background-position: center;
   background-repeat: repeat;
-  background-attachment: scroll;
-  padding-bottom: 30px !important;
+  background-attachment: static;
+
+  padding-bottom: 50px !important;
   padding-top: 30px !important;
 }
 
@@ -308,15 +309,17 @@ button:focus {
 
 .myAvtar {
   justify-content: center !important;
-  padding-top: 9em !important;
+  padding-top: 10em !important;
+  padding-left: 10em !important;
+  height: auto;
 }
-
-@media (max-width: 767px) {
+/* 
+@media (max-width: 1000px) {
   .myAvtar {
-    padding-top: 2em !important;
+    padding-top: 20em !important;
     padding-bottom: 2em !important;
   }
-}
+} */
 
 .home-contact-section {
   position: relative;
@@ -607,8 +610,11 @@ button:focus {
 
 .contact-section {
   position: relative !important;
-  padding-top: 150px !important;
-  padding-bottom: 30px !important;
+  padding-top: 10% !important;
+  padding-bottom: 10% !important;
+  padding-left: 120rem;
+  padding-right: 120rem;
+  margin: auto;
   background-image: var(--section-background-color) !important;
   color: white !important;
 }

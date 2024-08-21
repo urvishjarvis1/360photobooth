@@ -2,14 +2,14 @@ import React, { useState } from "react";
 import Navbar from "react-bootstrap/Navbar";
 import Nav from "react-bootstrap/Nav";
 import Container from "react-bootstrap/Container";
-import logo from "../Assets/logo.png";
+import logo from "../Assets/avatar/Little_Things_logo.gif";
 import Button from "react-bootstrap/Button";
 import { Link } from "react-router-dom";
-import { BsLinkedin } from "react-icons/bs";
+import { AiFillInstagram } from "react-icons/ai";
 import { ImBlog } from "react-icons/im";
 import {
   AiFillStar,
-  AiOutlineHome,
+  AiOutlinePhone,
   AiOutlineFundProjectionScreen,
   AiOutlineUser,
   AiFillContacts,
@@ -59,17 +59,17 @@ function NavBar() {
         <Navbar.Collapse id="responsive-navbar-nav">
           <Nav className="ms-auto" defaultActiveKey="#home">
             <Nav.Item>
-              <Nav.Link as={Link} to="/" onClick={() => updateExpanded(false)}>
-                <AiOutlineHome style={{ marginBottom: "2px" }} /> Home
+              <Nav.Link as={Link} to="tel:+1 306 580 1402" onClick={() => updateExpanded(false)}>
+                <AiOutlinePhone style={{ marginBottom: "2px" }} /> +1 (306) 580 1402
               </Nav.Link>
             </Nav.Item>
             <Nav.Item className="fork-btn">
             <Button
-                href="https://www.linkedin.com/in/priya-shah-28336bb2"
+                href="https://www.instagram.com/little__findings/"
                 target="_blank"
                 className="fork-btn-inner"
               >
-                <BsLinkedin style={{ fontSize: "1.4em" }} />
+                <AiFillInstagram style={{ fontSize: "1.4em" }} />
                 </Button>
             </Nav.Item>
           </Nav>
