@@ -1,7 +1,8 @@
+version: '3.9'
 services:
   priya-shop:
     build: .
     ports:
       - "7800:3000"
     volumes:
-      - ./src:/portfoilio/priya/
+      - /Users/jarvis/weddingphotoproject/Codes/360photobooth:/portfoilio/priya/
