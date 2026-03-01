@@ -308,18 +308,18 @@ button:focus {
 }
 
 .myAvtar {
-  justify-content: center !important;
-  padding-top: 10em !important;
+  justify-content: right !important;
+  padding-top: 2em !important;
   padding-left: 10em !important;
-  height: auto;
 }
-/* 
-@media (max-width: 1000px) {
+
+@media (max-width: 500px) {
   .myAvtar {
-    padding-top: 20em !important;
+    padding-top: 2em !important;
+    padding-left: 10em !important;
     padding-bottom: 2em !important;
   }
-} */
+}
 
 .home-contact-section {
   position: relative;
@@ -331,7 +331,7 @@ button:focus {
   color: white !important;
   padding-top: 100px !important;
   padding-bottom: 20px !important;
-  text-align: center;
+  text-align: left;
 }
 
 .home-about-body {
@@ -574,7 +574,12 @@ button:focus {
     margin: 10px !important;
   }
 }
-
+.slide-container{
+  padding-top: 50px !important;
+  padding-bottom: 50px !important;
+  border: #2d1950 solid 1.7px !important;
+  border-radius: 10px !important;
+}
 .tech-icons:hover {
   transform: scale(1.05) !important;
   overflow: hidden !important;

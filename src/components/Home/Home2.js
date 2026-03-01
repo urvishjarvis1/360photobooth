@@ -8,14 +8,14 @@ import {
   AiFillInstagram,
   AiFillYoutube,
 } from "react-icons/ai";
-import { FaLinkedinIn } from "react-icons/fa";
+import Slides from "../Slide/Slides";
 
 function Home2() {
   return (
     <Container fluid className="home-about-section" id="about">
       <Container>
         <Row>
-          <Col md={8} className="home-about-description">
+          <Col md={7} className="home-about-description">
             <h1 style={{ fontSize: "2.6em" }}>
               Introducing  <span className="purple"> the 360 Photo Booth - The Ultimate Party Starter!</span>
             </h1>
@@ -44,10 +44,8 @@ function Home2() {
             </p>
             
           </Col>
-          <Col md={4} className="myAvtar">
-            <Tilt>
-              <img src={myImg} className="img-fluid" alt="avatar" />
-            </Tilt>
+          <Col md={5} className="myAvtar">
+            <Slides/>
           </Col>
         </Row>
         <Row>
