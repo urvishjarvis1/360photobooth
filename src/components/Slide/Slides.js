@@ -1,49 +1,39 @@
-import React from 'react';
-import { Slide } from 'react-slideshow-image';
-import 'react-slideshow-image/dist/styles.css'
+import React from "react";
+import { Slide } from "react-slideshow-image";
+import "react-slideshow-image/dist/styles.css";
 import myImg from "../../Assets/avatar/product.png";
 import myImg2 from "../../Assets/avatar/360.jpeg";
-import myImg3 from "../../Assets/avatar/360-2.tiff";
+import myImg3 from "../../Assets/avatar/360-2.jpg";
+
+const slideImages = [
+  { img: myImg, alt: "360 photo booth setup" },
+  { img: myImg2, alt: "Guests using the 360 photo booth" },
+  { img: myImg3, alt: "360 photo booth in action" },
+];
+
 function Slides() {
-  const divStyle = {
-    display: 'flex',
-    alignItems: 'center',
-    justifyContent: 'center',
-    backgroundSize: 'cover',
-    height: '600px',
-    width: '600px',
-    accessibility: false,
-  }
-  const slideImages = [
-    {
-      img: myImg,
-      caption: 'Slide 1'
-    },
-    {
-      img: myImg2,
-      caption: 'Slide 2'
-    },
-    {
-      img: myImg3,
-      caption: 'Slide 3'
-    },
-  ];
   return (
-
-    <div className="slide-container" >
-
-      <Slide indicators={true} arrows={false} autoplay={true} duration={1700} transitionDuration={1000} infinite={true} indicators={true} >
-        {slideImages.map((slideImage, index) => (
-          <div key={index}>
-            < img src={slideImage.img} style={divStyle} className="img-fluid" alt="avatar" ></img>
+    <div className="slide-container">
+      <Slide
+        indicators
+        arrows
+        autoplay
+        duration={5000}
+        transitionDuration={600}
+        infinite
+        canSwipe
+        pauseOnHover
+      >
+        {slideImages.map((slide, index) => (
+          <div key={index} className="each-slide">
+            <div className="slide-item">
+              <img src={slide.img} className="slide-image" alt={slide.alt} />
+            </div>
           </div>
-        ))
-        }
-      </Slide >
-    </div >
-  )
-};
-
-
+        ))}
+      </Slide>
+    </div>
+  );
+}
 
 export default Slides;

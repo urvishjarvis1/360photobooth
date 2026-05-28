@@ -3,7 +3,8 @@ import Preloader from "../src/components/Pre";
 import Navbar from "./components/Navbar";
 import Home from "./components/Home/Home";
 import Footer from "./components/Footer";
-import Contact from "./components/Contact/Contact"
+import Contact from "./components/Contact/Contact";
+import RentNowModal from "./components/Home/RentNowModal";
 
 import {
   BrowserRouter as Router,
@@ -18,6 +19,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 
 function App() {
   const [load, upadateLoad] = useState(true);
+  const [showRentModal, setShowRentModal] = useState(false);
 
   useEffect(() => {
     const timer = setTimeout(() => {
@@ -31,7 +33,11 @@ function App() {
     <Router>
       <Preloader load={load} />
       <div className="App" id={load ? "no-scroll" : "scroll"}>
-        <Navbar />
+        <Navbar onRentNow={() => setShowRentModal(true)} />
+        <RentNowModal
+          show={showRentModal}
+          onHide={() => setShowRentModal(false)}
+        />
         <ScrollToTop />
         <Routes>
           <Route path="/" element={<Home />} />

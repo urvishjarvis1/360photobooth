@@ -248,6 +248,8 @@ button:focus {
   background-size: cover !important;
   width: 100%;
   height: 100%;
+  pointer-events: none !important;
+  z-index: 0;
 }
 
 .home-header {
@@ -256,7 +258,7 @@ button:focus {
 
 .home-section {
   position: relative;
-  z-index: -1;
+  z-index: 0;
   background-image: var(--image-gradient), url(./Assets/home-bg.jpg);
   background-position: center;
   background-repeat: repeat;
@@ -267,6 +269,8 @@ button:focus {
 }
 
 .home-content {
+  position: relative;
+  z-index: 1;
   padding: 9rem 0 2rem !important;
   color: whitesmoke;
   text-align: left;
@@ -284,6 +288,273 @@ button:focus {
 
 .main-name {
   color: #cd5ff8;
+}
+
+.hero-greeting-row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 1rem 1.25rem;
+  padding-left: 50px;
+}
+
+.rent-now-btn {
+  padding: 0.65rem 1.6rem;
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: #fff;
+  background: linear-gradient(135deg, #9b3fd4, #cd5ff8);
+  border: none;
+  border-radius: 12px;
+  box-shadow: 0 4px 18px rgba(190, 80, 244, 0.45);
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, filter 0.2s ease;
+  white-space: nowrap;
+}
+
+.rent-now-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 22px rgba(205, 95, 248, 0.55);
+  filter: brightness(1.08);
+  color: #fff;
+}
+
+.rent-now-btn:active {
+  transform: translateY(0);
+}
+
+.hero-image-col {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  justify-content: center;
+}
+
+.hero-image-wrap {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+  max-width: 420px;
+  margin: 0 auto;
+}
+
+.hero-image-wrap > div {
+  pointer-events: none;
+}
+
+.hero-avatar-img {
+  padding-top: 0;
+  display: block;
+  width: 100%;
+  pointer-events: none;
+}
+
+.nav-cta-group {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  padding: 0.35rem 0 0.35rem 0.5rem;
+}
+
+.rent-now-btn--nav {
+  margin: 0;
+  padding: 0.5rem 1.15rem;
+  font-size: 0.95rem;
+  line-height: 1.2;
+}
+
+.nav-instagram-btn {
+  padding: 0.5rem 0.85rem !important;
+  min-width: 44px;
+  display: inline-flex !important;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px !important;
+}
+
+.rent-now-modal .modal-content {
+  background: linear-gradient(160deg, #1a0f2e 0%, #12081f 100%);
+  border: 1px solid rgba(190, 80, 244, 0.35);
+  border-radius: 16px;
+  color: #f5f0ff;
+}
+
+.rent-now-modal-header {
+  border-bottom: 1px solid rgba(190, 80, 244, 0.25);
+}
+
+.rent-now-modal-header .modal-title {
+  color: #e8c4ff;
+  font-weight: 600;
+}
+
+.rent-now-modal-body {
+  padding: 1.5rem 1.75rem 1.75rem;
+}
+
+.rent-now-intro {
+  color: rgba(245, 240, 255, 0.85);
+  margin-bottom: 1.25rem;
+}
+
+.rent-now-modal .form-label {
+  color: #d4b8f0;
+  font-weight: 500;
+}
+
+.rent-now-input {
+  background-color: rgba(255, 255, 255, 0.06) !important;
+  border: 1px solid rgba(190, 80, 244, 0.35) !important;
+  color: #fff !important;
+}
+
+.rent-now-input:focus {
+  background-color: rgba(255, 255, 255, 0.09) !important;
+  border-color: #cd5ff8 !important;
+  box-shadow: 0 0 0 0.2rem rgba(205, 95, 248, 0.25) !important;
+}
+
+.rent-now-input::placeholder {
+  color: rgba(255, 255, 255, 0.35);
+}
+
+.rent-now-input option {
+  background-color: #1a0f2e;
+  color: #fff;
+}
+
+.rent-now-submit-btn {
+  background: linear-gradient(135deg, #9b3fd4, #cd5ff8) !important;
+  border: none !important;
+  font-weight: 600 !important;
+  padding: 0.7rem 1.25rem !important;
+  border-radius: 10px !important;
+}
+
+.rent-now-submit-btn:hover {
+  filter: brightness(1.08);
+}
+
+.rent-now-close-btn {
+  border-color: rgba(190, 80, 244, 0.5) !important;
+  color: #e8c4ff !important;
+}
+
+.rent-now-error {
+  color: #ff8a9b;
+  font-size: 0.95rem;
+}
+
+.rent-now-success {
+  color: #c8f0c8;
+  margin-bottom: 1rem;
+}
+
+.rent-now-success-view {
+  text-align: center;
+  padding: 0.5rem 0 0.25rem;
+}
+
+.rent-now-policy-check {
+  color: rgba(245, 240, 255, 0.9);
+}
+
+.rent-now-policy-check .form-check-input {
+  background-color: rgba(255, 255, 255, 0.08);
+  border-color: rgba(190, 80, 244, 0.5);
+  cursor: pointer;
+}
+
+.rent-now-policy-check .form-check-input:checked {
+  background-color: #cd5ff8;
+  border-color: #cd5ff8;
+}
+
+.rent-now-policy-check .form-check-input:focus {
+  box-shadow: 0 0 0 0.2rem rgba(205, 95, 248, 0.25);
+}
+
+.rent-now-policy-label {
+  line-height: 1.45;
+}
+
+.rent-policy-link {
+  color: #cd5ff8;
+  font-weight: 600;
+  text-decoration: underline;
+}
+
+.rent-policy-link:hover {
+  color: #e8c4ff;
+}
+
+.rent-now-modal--pdf .modal-header {
+  padding: 0.85rem 1.25rem;
+}
+
+.rent-now-modal--pdf .rent-now-modal-body {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  padding: 0.75rem 1rem 1rem;
+  overflow: hidden;
+}
+
+.rent-now-modal--pdf .rent-now-pdf-view {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  min-height: 0;
+}
+
+.rent-now-modal--pdf .rent-now-success {
+  margin-bottom: 0.65rem;
+  font-size: 0.95rem;
+}
+
+.rent-now-pdf-frame {
+  width: 100%;
+  flex: 1;
+  min-height: 0;
+  height: calc(100vh - 200px);
+  min-height: 420px;
+  border: 1px solid rgba(190, 80, 244, 0.3);
+  border-radius: 8px;
+  background: #0c0513;
+}
+
+.rent-now-pdf-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-top: 1rem;
+}
+
+@media (max-width: 767px) {
+  .hero-greeting-row {
+    padding-left: 0;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .heading {
+    padding-left: 0 !important;
+  }
+
+  .hero-image-wrap {
+    max-width: 300px;
+  }
+
+  .nav-cta-group {
+    width: 100%;
+    justify-content: center;
+    padding: 0.75rem 0 0.5rem;
+  }
+
+  .rent-now-pdf-frame {
+    height: calc(100vh - 220px);
+    min-height: 320px;
+  }
 }
 
 .Typewriter__wrapper {
@@ -308,16 +579,18 @@ button:focus {
 }
 
 .myAvtar {
-  justify-content: right !important;
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
   padding-top: 2em !important;
-  padding-left: 10em !important;
+  padding-left: 0 !important;
+  padding-right: 0 !important;
 }
 
-@media (max-width: 500px) {
+@media (min-width: 768px) {
   .myAvtar {
-    padding-top: 2em !important;
-    padding-left: 10em !important;
-    padding-bottom: 2em !important;
+    justify-content: flex-end !important;
+    padding-left: 1.5rem !important;
   }
 }
 
@@ -574,11 +847,104 @@ button:focus {
     margin: 10px !important;
   }
 }
-.slide-container{
-  padding-top: 50px !important;
-  padding-bottom: 50px !important;
-  border: #2d1950 solid 1.7px !important;
-  border-radius: 10px !important;
+.slide-container {
+  width: 100%;
+  max-width: 440px;
+  margin: 0 auto;
+  padding: 0.5rem !important;
+  border: 1.7px solid rgba(190, 80, 244, 0.35) !important;
+  border-radius: 12px !important;
+  overflow: hidden;
+  background: rgba(12, 5, 19, 0.5);
+}
+
+.slide-container .react-slideshow-container {
+  width: 100% !important;
+}
+
+.slide-container .react-slideshow-wrapper.slide {
+  width: 100% !important;
+}
+
+.slide-container .images-wrap.horizontal {
+  height: 380px !important;
+}
+
+.slide-container .each-slide {
+  width: 100%;
+  height: 380px;
+}
+
+.slide-item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  padding: 0.5rem;
+  background: rgba(8, 4, 14, 0.6);
+}
+
+.slide-image {
+  display: block;
+  width: 100%;
+  height: 100%;
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+  border-radius: 8px;
+}
+
+.slide-container .react-slideshow-container .default-nav {
+  width: 36px !important;
+  height: 36px !important;
+  background: rgba(155, 63, 212, 0.85) !important;
+  color: #fff !important;
+  border: 1px solid rgba(255, 255, 255, 0.25) !important;
+  margin: 0 8px !important;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.35);
+}
+
+.slide-container .react-slideshow-container .default-nav:hover,
+.slide-container .react-slideshow-container .default-nav:focus {
+  background: #cd5ff8 !important;
+  color: #fff !important;
+}
+
+.slide-container + ul.indicators {
+  margin-top: 0.85rem !important;
+  margin-bottom: 0.25rem !important;
+}
+
+.slide-container + ul.indicators .each-slideshow-indicator::before {
+  background: #cd5ff8 !important;
+}
+
+.slide-container + ul.indicators .each-slideshow-indicator.active::before {
+  background: #fff !important;
+  transform: scale(1.25);
+}
+
+@media (max-width: 767px) {
+  .slide-container {
+    max-width: 100%;
+    margin-top: 1.5rem;
+  }
+
+  .slide-container .images-wrap.horizontal,
+  .slide-container .each-slide {
+    height: 280px !important;
+  }
+
+  .home-about-description {
+    padding-top: 2rem !important;
+  }
+}
+
+@media (min-width: 992px) {
+  .slide-container {
+    max-width: 420px;
+  }
 }
 .tech-icons:hover {
   transform: scale(1.05) !important;
@@ -750,6 +1116,13 @@ button:focus {
 .fork-btn {
   font-size: 1.1em !important;
   padding-top: 10px !important;
+}
+
+@media (min-width: 768px) {
+  .nav-cta-group {
+    padding-top: 0;
+    padding-bottom: 0;
+  }
 }
 
 .fork-btn-inner {
